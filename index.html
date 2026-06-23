@@ -403,15 +403,15 @@
         <a href="#experience">Experience</a>
         <a href="#skills">Skills</a>
         <a href="#education">Education</a>
+        <a href="#certifications">Certs</a>
         <a href="#contact">Contact</a>
       </nav>
-      <!-- CV LINK: replace href="#" with your CV PDF link -->
-      <a href="#" class="nav-cta">Download CV</a>
+      <a href="Fenil_Ramani_CV.pdf" download class="nav-cta" data-evt="cv: download (nav)">Download CV</a>
       <button class="burger" id="burger" aria-label="Menu">☰</button>
     </div>
     <div class="mobile-menu" id="mobileMenu">
       <a href="#about">About</a><a href="#projects">Projects</a><a href="#experience">Experience</a>
-      <a href="#skills">Skills</a><a href="#education">Education</a><a href="#contact">Contact</a>
+      <a href="#skills">Skills</a><a href="#education">Education</a><a href="#certifications">Certifications</a><a href="#contact">Contact</a>
     </div>
   </header>
 
@@ -428,13 +428,12 @@
         <div class="cta-row anim" style="animation-delay:1.14s">
           <a href="#projects" class="btn primary">View work
             <svg class="i" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-          <!-- CV LINK: replace href="#" with your CV PDF link -->
-          <a href="#" class="btn ghost">
+          <a href="Fenil_Ramani_CV.pdf" download class="btn ghost" data-evt="cv: download (hero)">
             <svg class="i" viewBox="0 0 24 24"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>Download CV</a>
           <div class="socials">
             <a href="https://github.com/fenilramani4007" target="_blank" rel="noreferrer" aria-label="GitHub"><svg class="i" viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.9a3.4 3.4 0 0 0-.9-2.6c3-.3 6.2-1.5 6.2-6.7A5.2 5.2 0 0 0 20 4.8a4.9 4.9 0 0 0-.1-3.6s-1.1-.3-3.6 1.4a12.3 12.3 0 0 0-6.6 0C7.2.9 6.1 1.2 6.1 1.2A4.9 4.9 0 0 0 6 4.8a5.2 5.2 0 0 0-1.4 3.7c0 5.2 3.2 6.4 6.2 6.7a3.4 3.4 0 0 0-.9 2.6V22"/></svg></a>
             <a href="https://linkedin.com/in/fenil-ramani-dev" target="_blank" rel="noreferrer" aria-label="LinkedIn"><svg class="i" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v6h-4v-6a2 2 0 0 0-4 0v6h-4v-6a6 6 0 0 1 6-6zM6 9H2v11h4zM4 6a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/></svg></a>
-            <a href="mailto:fenilramani0503@gmail.com" aria-label="Email"><svg class="i" viewBox="0 0 24 24"><path d="M4 4h16v16H4zM4 6l8 6 8-6"/></svg></a>
+            <a href="mailto:fenilramani4007@gmail.com" aria-label="Email"><svg class="i" viewBox="0 0 24 24"><path d="M4 4h16v16H4zM4 6l8 6 8-6"/></svg></a>
           </div>
         </div>
         <div class="hero-meta anim" style="animation-delay:1.22s">
@@ -665,12 +664,64 @@
     </div>
   </section>
 
+  <!-- CERTIFICATIONS -->
+  <style>
+    .reel-section .filmstrip{margin-top:54px;position:relative;border-radius:16px;background:linear-gradient(180deg,#0b0e15,#080a10);border:1px solid var(--line-strong);padding:30px 16px;overflow:hidden;box-shadow:inset 0 0 60px -30px #000}
+    .reel-section .perf{position:absolute;left:0;right:0;height:18px;background:radial-gradient(circle at 13px 9px,color-mix(in srgb,var(--bone) 16%,transparent) 0 3.6px,transparent 4.6px);background-size:26px 18px;opacity:.7}
+    .reel-section .perf.top{top:0}.reel-section .perf.bot{bottom:0}
+    .reel-section .frames{display:grid;grid-template-columns:repeat(4,1fr);gap:13px;padding:6px 4px}
+    .reel-section .frame{position:relative;border:1px solid var(--line);background:linear-gradient(180deg,var(--surface),color-mix(in srgb,var(--surface) 70%,var(--ink)));border-radius:11px;padding:18px;transition:border-color .25s,transform .25s;overflow:hidden}
+    .reel-section .frame::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:linear-gradient(var(--gold),var(--cyan))}
+    .reel-section .frame:hover{border-color:color-mix(in srgb,var(--gold) 45%,transparent);transform:translateY(-3px)}
+    .reel-section .frame .fnum{display:flex;align-items:center;justify-content:space-between;font-family:var(--font-mono);font-size:10px;letter-spacing:.18em;color:var(--muted)}
+    .reel-section .frame .fnum .rec{color:var(--ember);letter-spacing:.12em}
+    .reel-section .frame .issuer{margin-top:14px;display:inline-block;font-family:var(--font-mono);font-size:10px;letter-spacing:.06em;color:var(--gold);border:1px solid color-mix(in srgb,var(--gold) 35%,transparent);background:color-mix(in srgb,var(--gold) 8%,transparent);border-radius:6px;padding:3px 8px}
+    .reel-section .frame h4{margin-top:12px;font-size:1.02rem;line-height:1.28}
+    .reel-section .frame .fdate{margin-top:10px;font-family:var(--font-mono);font-size:11px;color:var(--muted)}
+    .reel-section .cv-band{margin-top:30px;position:relative;border:1px solid color-mix(in srgb,var(--gold) 30%,transparent);border-radius:18px;padding:26px 30px;display:flex;align-items:center;justify-content:space-between;gap:22px;flex-wrap:wrap;overflow:hidden;background:linear-gradient(135deg,color-mix(in srgb,var(--gold) 12%,var(--surface)),var(--surface) 52%,color-mix(in srgb,var(--cyan) 10%,var(--surface)))}
+    .reel-section .cv-band .ct .lbl{font-family:var(--font-mono);font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}
+    .reel-section .cv-band .ct h3{font-size:1.55rem;margin-top:6px}
+    .reel-section .cv-band .ct p{margin:6px 0 0;color:var(--muted);font-size:.92rem;max-width:42ch}
+    .reel-section .cv-band .ops{display:flex;gap:11px;flex-wrap:wrap}
+    @media(max-width:920px){.reel-section .frames{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:640px){.reel-section .frames{grid-template-columns:1fr}.reel-section .cv-band{padding:22px}}
+  </style>
+  <section id="certifications" class="reel-section">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow"><span class="num">06</span><span class="rule"></span><span>Scene &middot; Certifications</span></div>
+        <h2>Credentials, frame by frame.</h2>
+        <p>Seven certifications across data science, machine learning and engineering &mdash; shot on a 35mm reel.</p>
+      </div>
+      <div class="filmstrip reveal">
+        <div class="perf top"></div>
+        <div class="frames">
+          <article class="frame"><div class="fnum"><span>FR-001</span><span class="rec">&#9679;&nbsp;REC</span></div><span class="issuer">Deloitte &middot; Forage</span><h4>Data Analytics Job Simulation</h4><div class="fdate">Feb 2025</div></article>
+          <article class="frame"><div class="fnum"><span>FR-002</span><span class="rec">&#9679;&nbsp;REC</span></div><span class="issuer">Great Learning</span><h4>Machine Learning Algorithms</h4><div class="fdate">Dec 2022</div></article>
+          <article class="frame"><div class="fnum"><span>FR-003</span><span class="rec">&#9679;&nbsp;REC</span></div><span class="issuer">IBM &middot; Cognitive Class</span><h4>Python 101 for Data Science</h4><div class="fdate">Sep 2023</div></article>
+          <article class="frame"><div class="fnum"><span>FR-004</span><span class="rec">&#9679;&nbsp;REC</span></div><span class="issuer">IIT Bombay</span><h4>PHP &amp; MySQL Training</h4><div class="fdate">Jul 2024</div></article>
+          <article class="frame"><div class="fnum"><span>FR-005</span><span class="rec">&#9679;&nbsp;REC</span></div><span class="issuer">IIT Bombay</span><h4>Python 3.4.3 Training</h4><div class="fdate">Jul 2023</div></article>
+          <article class="frame"><div class="fnum"><span>FR-006</span><span class="rec">&#9679;&nbsp;REC</span></div><span class="issuer">IIT Bombay</span><h4>C Programming Training</h4><div class="fdate">Apr 2023</div></article>
+          <article class="frame"><div class="fnum"><span>FR-007</span><span class="rec">&#9679;&nbsp;REC</span></div><span class="issuer">Parul University</span><h4>Web Designing &amp; Hosting</h4><div class="fdate">May 2023</div></article>
+        </div>
+        <div class="perf bot"></div>
+      </div>
+      <div class="cv-band reveal">
+        <div class="ct"><span class="lbl">The full reel</span><h3>Resume / CV</h3><p>Experience, projects, skills and all credentials on one page.</p></div>
+        <div class="ops">
+          <a href="Fenil_Ramani_CV.pdf" download class="btn primary" data-evt="cv: download (certs)"><svg class="i" viewBox="0 0 24 24"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>Download CV (PDF)</a>
+          <a href="Fenil_Ramani_CV.pdf" target="_blank" rel="noreferrer" class="btn ghost" data-evt="cv: view online"><svg class="i" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>View online</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- CONTACT -->
   <section id="contact">
     <div class="glow"></div>
     <div class="wrap">
       <div class="section-head reveal">
-        <div class="eyebrow" style="justify-content:center"><span class="num">06</span><span class="rule"></span><span>Scene · Contact</span></div>
+        <div class="eyebrow" style="justify-content:center"><span class="num">07</span><span class="rule"></span><span>Scene · Contact</span></div>
         <h2>Let's connect.</h2>
         <p style="margin-inline:auto">Open to Werkstudent and internship roles in Data Science, AI Engineering, and Analytics. Happy to chat about projects, collaborations, or just AI in general.</p>
       </div>
@@ -689,10 +740,10 @@
       </form>
 
       <div class="clinks">
-        <a class="clink reveal" href="mailto:fenilramani0503@gmail.com">
+        <a class="clink reveal" href="mailto:fenilramani4007@gmail.com">
           <div class="row"><div class="ico"><svg class="i" viewBox="0 0 24 24"><path d="M4 4h16v16H4zM4 6l8 6 8-6"/></svg></div>
             <svg class="i" viewBox="0 0 24 24" style="color:var(--muted)"><path d="M7 17L17 7M9 7h8v8"/></svg></div>
-          <div class="lbl">Email</div><div class="val">fenilramani0503@gmail.com</div>
+          <div class="lbl">Email</div><div class="val">fenilramani4007@gmail.com</div>
         </a>
         <a class="clink reveal" href="https://github.com/fenilramani4007" target="_blank" rel="noreferrer">
           <div class="row"><div class="ico"><svg class="i" viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.9a3.4 3.4 0 0 0-.9-2.6c3-.3 6.2-1.5 6.2-6.7A5.2 5.2 0 0 0 20 4.8a4.9 4.9 0 0 0-.1-3.6s-1.1-.3-3.6 1.4a12.3 12.3 0 0 0-6.6 0C7.2.9 6.1 1.2 6.1 1.2A4.9 4.9 0 0 0 6 4.8a5.2 5.2 0 0 0-1.4 3.7c0 5.2 3.2 6.4 6.2 6.7a3.4 3.4 0 0 0-.9 2.6V22"/></svg></div>
@@ -714,7 +765,7 @@
       <div class="fl">
         <a href="https://github.com/fenilramani4007" target="_blank" rel="noreferrer" aria-label="GitHub"><svg class="i" viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.9a3.4 3.4 0 0 0-.9-2.6c3-.3 6.2-1.5 6.2-6.7A5.2 5.2 0 0 0 20 4.8a4.9 4.9 0 0 0-.1-3.6s-1.1-.3-3.6 1.4a12.3 12.3 0 0 0-6.6 0C7.2.9 6.1 1.2 6.1 1.2A4.9 4.9 0 0 0 6 4.8a5.2 5.2 0 0 0-1.4 3.7c0 5.2 3.2 6.4 6.2 6.7a3.4 3.4 0 0 0-.9 2.6V22"/></svg></a>
         <a href="https://linkedin.com/in/fenil-ramani-dev" target="_blank" rel="noreferrer" aria-label="LinkedIn"><svg class="i" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v6h-4v-6a2 2 0 0 0-4 0v6h-4v-6a6 6 0 0 1 6-6zM6 9H2v11h4zM4 6a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/></svg></a>
-        <a href="mailto:fenilramani0503@gmail.com" aria-label="Email"><svg class="i" viewBox="0 0 24 24"><path d="M4 4h16v16H4zM4 6l8 6 8-6"/></svg></a>
+        <a href="mailto:fenilramani4007@gmail.com" aria-label="Email"><svg class="i" viewBox="0 0 24 24"><path d="M4 4h16v16H4zM4 6l8 6 8-6"/></svg></a>
       </div>
     </div>
   </footer>
@@ -752,7 +803,7 @@
   mm&&mm.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){mm.classList.remove('open');});});
 
   // chapter rail active state (built dynamically so markup stays clean)
-  var ids=['about','projects','experience','skills','education','contact'];
+  var ids=['about','projects','experience','skills','education','certifications','contact'];
   var rail=document.createElement('nav');rail.className='rail';
   ids.forEach(function(id,i){
     var a=document.createElement('a');a.href='#'+id;a.dataset.id=id;
@@ -797,7 +848,7 @@
           if(r.ok){ form.reset(); status.className='ok'; status.textContent='Thanks — your message was sent. I will get back to you soon.'; track('inquiry: sent'); }
           else { return r.json().then(function(d){ status.className='err'; status.textContent=(d&&d.errors&&d.errors[0]&&d.errors[0].message) || 'Something went wrong — please email me directly.'; }); }
         })
-        .catch(function(){ status.className='err'; status.textContent='Network error — please email me directly at fenilramani0503@gmail.com.'; });
+        .catch(function(){ status.className='err'; status.textContent='Network error — please email me directly at fenilramani4007@gmail.com.'; });
     });
   }
 </script>
